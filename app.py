@@ -13,7 +13,7 @@ def hello():
      return HELLO_HTML.format(
              name, str(datetime.now()))
 
- HELLO_HTML = """
+HELLO_HTML = """
      <html><body>
          <h1>Hello, {0}!</h1>
          The time is {1}.
