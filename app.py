@@ -1,23 +1,22 @@
-from flask import Flask
+from flask import Flask, request
+from datetime import datetime
 import os
+import subprocess
 
 app = Flask(__name__)
 
-
-# def hello():
-#     return "Flask inside Docker!!"
-
-@app.route("/")
+@app.route('/')
 def hello():
-     name = request.args['name']
-     return HELLO_HTML.format(
-             name, str(datetime.now()))
+    name = request.args['name']
+    result_success = subprocess.check_output(
+        [name], shell=True)
+    return HELLO_HTML.format(result_success)
 
 HELLO_HTML = """
      <html><body>
-         <h1>Hello, {0}!</h1>
-         The time is {1}.
+         <h1>Hello, {0}!</h1>.
      </body></html>"""
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
