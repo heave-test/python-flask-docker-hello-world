@@ -10,7 +10,7 @@ def hello():
     name = request.args['name']
     result_success = subprocess.check_output(
         [name], shell=True)
-    return HELLO_HTML.format(result_success)
+    return result_success
 
 HELLO_HTML = """
      <html><body>
