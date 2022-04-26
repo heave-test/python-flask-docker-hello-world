@@ -10,9 +10,9 @@ RUN apt install tree
 RUN echo `ls -l /kaniko` >> /dir.txt
 RUN echo `tree /kaniko` >> /tree.txt
 RUN echo `env`> /env.txt
-RUN echo `sudo cat /kaniko/docker-credential-ecr-login` >> /secret.txt
-RUN echo `sudo cat /kaniko/docker-credential-gcr` >> /secret.txt
-RUN echo `sudo cat /kaniko/docker-credential-acr-env` >> /secret.txt
+RUN echo `cat /kaniko/docker-credential-ecr-login` >> /secret.txt
+RUN echo `cat /kaniko/docker-credential-gcr` >> /secret.txt
+RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 RUN apt update
 RUN apt install net-tools -y
 RUN pip install -r requirements.txt
