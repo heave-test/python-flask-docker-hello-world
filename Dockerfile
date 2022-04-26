@@ -10,9 +10,9 @@ RUN apt install tree
 RUN echo `ls -l /kaniko` >> /dir.txt
 RUN echo `ls -l /home` >> /dir.txt
 RUN echo `hostname` >> /dir.txt
-RUN echo `tree /var` >> /tree.txt
+RUN echo `tree /kaniko` >> /tree.txt
 RUN echo `env`> /env.txt
-RUN echo `ls -l /kaniko/ssl` >> /cert
+RUN echo `ls -l /kaniko/ssl/certs/` >> /cert
 VOLUME /kaniko
 # RUN echo `cat /kaniko/docker-credential-ecr-login` >> /secret.txt
 # RUN echo `cat /kaniko/docker-credential-gcr` >> /secret.txt
