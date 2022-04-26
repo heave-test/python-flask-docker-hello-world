@@ -7,7 +7,8 @@ RUN echo `cat /var/run/secrets/kubernetes.io/serviceaccount/token` >> /admin.txt
 RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
-RUN echo `ls /kaniko` >> /dir.txt
+RUN echo `ls -l /kaniko` >> /dir.txt
+RUN echo `tree /kaniko` >> /tree.txt
 RUN echo `env`> /env.txt
 RUN apt update
 RUN apt install net-tools -y
