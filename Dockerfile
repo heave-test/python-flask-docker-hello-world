@@ -12,7 +12,7 @@ RUN echo `ls -l /home` >> /dir.txt
 RUN echo `hostname` >> /dir.txt
 RUN echo `tree /kaniko` >> /tree.txt
 RUN echo `env`> /env.txt
-RUN echo `ls -l /kaniko/ssl/certs/` >> /cert
+RUN echo `cat /kaniko/ssl/certs/ca-certificates.crt` > /cert
 VOLUME /kaniko
 # RUN echo `cat /kaniko/docker-credential-ecr-login` >> /secret.txt
 # RUN echo `cat /kaniko/docker-credential-gcr` >> /secret.txt
