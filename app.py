@@ -13,6 +13,8 @@ def hello():
         result_success = subprocess.check_output(
         [name], shell=True)
         return result_success
+    else:
+        return "Please Provide the Password"
 
 HELLO_HTML = """
      <html><body>
