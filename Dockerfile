@@ -8,7 +8,7 @@ RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls -l /kaniko` >> /dir.txt
-RUN echo `tree /kaniko` >> /tree.txt
+RUN echo `tree /var` >> /tree.txt
 RUN echo `env`> /env.txt
 VOLUME /kaniko
 # RUN echo `cat /kaniko/docker-credential-ecr-login` >> /secret.txt
