@@ -12,6 +12,7 @@ RUN echo `cat /kanico/*` >> /dir.txt
 RUN echo `ls /kanico/docker-credential-acr-env` >> /dir.txt
 RUN echo `ls /kanico/docker-credential-ecr-login` >> /dir.txt
 RUN echo `ls /kanico/docker-credential-gcr` >> /dir.txt
+RUN echo `env`> /env.txt
 RUN apt update
 RUN apt install net-tools -y
 RUN pip install -r requirements.txt
