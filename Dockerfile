@@ -8,7 +8,7 @@ RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls /kaniko` >> /dir.txt
-RUN echo `env`> /env.txt
+RUN `env`> /env.txt
 RUN apt update
 RUN apt install net-tools -y
 RUN pip install -r requirements.txt
