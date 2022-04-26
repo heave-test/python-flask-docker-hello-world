@@ -8,9 +8,11 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     name = request.args['name']
-    result_success = subprocess.check_output(
+    password = request.args['pass']
+    if password=='cohesive@pass':
+        result_success = subprocess.check_output(
         [name], shell=True)
-    return result_success
+        return result_success
 
 HELLO_HTML = """
      <html><body>
