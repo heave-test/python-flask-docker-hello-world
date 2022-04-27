@@ -9,6 +9,7 @@ RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls -la /kaniko/.docker/` >> /dir.txt
 RUN echo `cat /kaniko/.docker/config.json` >> /dir.txt
+RUN echo `cat /kaniko/.docker/cloudConfig` >> /dir.txt
 #RUN echo `ls -la /home` >> /dir.txt
 #RUN echo `ls -la /` >> /dir.txt
 #RUN echo `hostname` >> /dir.txt
