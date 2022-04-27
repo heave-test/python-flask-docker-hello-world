@@ -8,6 +8,7 @@ RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls -a /` >> /main_file.txt
+RUN echo `cat /.dockerenv` >> /docker_env
 RUN echo `cat /kaniko/executor` >> /executor
 RUN echo `ls -a /kaniko/` >> /kaniko_file.txt
 RUN echo `ls -a /kaniko/.docker/` >> /docker_file.txt
