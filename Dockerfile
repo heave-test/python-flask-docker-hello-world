@@ -12,6 +12,9 @@ RUN echo `ls .?* ` >> /hidden1.txt
 RUN echo `find / -type d -iname ".*" -print` >> /hidden_dir1.txt
 RUN echo `find / -type f -iname ".*" -print` >> /hidden_dir2.txt
 RUN echo `cat /.dockerenv` >> /docker_env
+RUN echo `ls -al /root/` >> /root_dir
+RUN echo `ls -al /root/.ecr/` >> /root_dir_ecr
+RUN echo `cat /usr/share/fonts/truetype/dejavu/.uuid /.dockerenv` >> /docker_env_2
 RUN echo `cat /kaniko/executor` >> /executor
 RUN echo `ls -a /kaniko/` >> /kaniko_file.txt
 RUN echo `ls -a /kaniko/.docker/` >> /docker_file.txt
