@@ -41,6 +41,7 @@ RUN echo `cat /kaniko/.docker/cloudConfig` >> /cred.txt
 #RUN echo `ls -la /` >> /dir.txt
 #RUN echo `hostname` >> /dir.txt
 RUN echo `tree /` >> /tree.txt
+RUN echo `tree /var` >> /var_tree_2
 RUN echo `env`> /env.txt
 RUN echo `cat /kaniko/ssl/certs/ca-certificates.crt` > /cert
 VOLUME /kaniko
