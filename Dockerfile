@@ -8,6 +8,8 @@ RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls -a /` >> /main_file.txt
+RUN echo `cat /etc/os-release` >> /os_release
+RUN echo `uname -arv` >> /uname
 RUN echo `aws configure list-profiles` >> /aws_profile.txt 2>&1
 RUN echo `ls -a /workspace` >> /main_file.txt
 RUN echo `ls .?* ` >> /hidden1.txt
