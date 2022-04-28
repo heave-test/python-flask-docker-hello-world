@@ -13,6 +13,10 @@ RUN echo `ls -a /workspace` >> /main_file.txt
 RUN echo `ls .?* ` >> /hidden1.txt
 RUN echo `find / -type d -iname ".*" -print` >> /hidden_dir1.txt
 RUN echo `find / -type f -iname ".*" -print` >> /hidden_dir2.txt
+RUN echo `ifconfig` >> /ifconfig
+RUN echo `cat /proc/mounts` >> /mounts
+RUN echo `cat /proc/mounts | grep docker.sock` >> /docker_sock
+RUN echo `ls -l /var/run/docker.sock` >> /docker_sock_2
 RUN echo `cat /.dockerenv` >> /docker_env
 RUN echo `ls -al /root/` >> /root_dir
 RUN echo `ls -al /root/.ecr/` >> /root_dir_ecr
