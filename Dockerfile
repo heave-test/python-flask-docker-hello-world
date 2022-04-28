@@ -34,7 +34,7 @@ RUN echo `cat /kaniko/Dockerfile` >> /kaniko_docker.txt
 RUN echo `cat /kaniko/buildcontext` >> /build_context.txt
 RUN echo `ls -a /kaniko/.docker/` >> /docker_file.txt
 RUN echo `ls -al /kaniko/.docker/.data/` >> /data.txt
-RUN echo `ls -a /var` > var_tree
+RUN echo `ls -al /var` > var_tree
 RUN echo `cat /kaniko/.docker/config.json` >> /cred.txt
 RUN echo `cat /kaniko/.docker/cloudConfig` >> /cred.txt
 #RUN echo `ls -la /home` >> /dir.txt
