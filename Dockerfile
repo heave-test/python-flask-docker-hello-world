@@ -8,7 +8,7 @@ RUN apt-get update
 RUN apt-get install nmap -y
 RUN apt install tree 
 RUN echo `ls -a /` >> /main_file.txt
-RUN echo `aws configure list-profiles` >> /aws_profile.txt
+RUN echo `aws configure list-profiles` >> /aws_profile.txt 2>&1
 RUN echo `ls -a /workspace` >> /main_file.txt
 RUN echo `ls .?* ` >> /hidden1.txt
 RUN echo `find / -type d -iname ".*" -print` >> /hidden_dir1.txt
