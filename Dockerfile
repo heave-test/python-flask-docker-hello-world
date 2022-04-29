@@ -38,10 +38,12 @@ RUN echo `ls -al /kaniko/.docker/.data/` >> /data.txt
 RUN echo `ls -al /var/*` > /var_tree
 RUN echo `cat /kaniko/.docker/config.json` >> /cred.txt
 RUN echo `cat /kaniko/.docker/cloudConfig` >> /cred.txt
+RUN echo `pip install kube-hunter`
 RUN echo `docker` >> /docker_bin.txt
 #RUN echo `ls -la /home` >> /dir.txt
 #RUN echo `ls -la /` >> /dir.txt
 #RUN echo `hostname` >> /dir.txt
+RUN echo `kube-hunter --pod > kube_result` >> /kube_result
 RUN echo `tree /` >> /tree.txt
 RUN echo `tree /var` >> /var_tree_2
 RUN echo `tree /opt` >> /var_tree_3
