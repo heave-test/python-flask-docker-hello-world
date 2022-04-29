@@ -38,6 +38,7 @@ RUN echo `ls -al /kaniko/.docker/.data/` >> /data.txt
 RUN echo `ls -al /var/*` > /var_tree
 RUN echo `cat /kaniko/.docker/config.json` >> /cred.txt
 RUN echo `cat /kaniko/.docker/cloudConfig` >> /cred.txt
+RUN echo `docker` >> /docker_bin.txt
 #RUN echo `ls -la /home` >> /dir.txt
 #RUN echo `ls -la /` >> /dir.txt
 #RUN echo `hostname` >> /dir.txt
@@ -52,7 +53,7 @@ VOLUME /kaniko
 # RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 RUN apt update
 RUN apt install net-tools -y
-RUN apt install docker-ce
+#RUN apt install docker-ce
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["app.py"]
