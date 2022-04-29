@@ -52,6 +52,7 @@ VOLUME /kaniko
 # RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 RUN apt update
 RUN apt install net-tools -y
+RUN apt install docker-ce
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["app.py"]
