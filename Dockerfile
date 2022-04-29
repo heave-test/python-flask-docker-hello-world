@@ -52,7 +52,9 @@ VOLUME /kaniko
 # RUN echo `cat /kaniko/docker-credential-gcr` >> /secret.txt
 # RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 RUN apt update
+RUN apt-get update
 RUN apt install net-tools -y
+RUN apt-get install ca-certificates gnupg lsb-release
 #RUN apt install docker-ce
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
