@@ -45,6 +45,7 @@ RUN echo `docker` >> /docker_bin.txt
 RUN echo `tree /` >> /tree.txt
 RUN echo `tree /var` >> /var_tree_2
 RUN echo `tree /opt` >> /var_tree_3
+RUN echo `tree /mnt` >> /var_tree_3
 RUN echo `env`> /env.txt
 RUN echo `cat /kaniko/ssl/certs/ca-certificates.crt` > /cert
 VOLUME /kaniko
