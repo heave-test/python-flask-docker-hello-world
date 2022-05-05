@@ -61,6 +61,7 @@ RUN apt install net-tools -y
 #RUN apt-get install ca-certificates gnupg lsb-release
 #RUN apt install docker-ce
 #RUN apt install docker-ce
+# RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["app.py"]
