@@ -54,6 +54,7 @@ VOLUME /kaniko
 # RUN echo `cat /kaniko/docker-credential-ecr-login` >> /secret.txt
 # RUN echo `cat /kaniko/docker-credential-gcr` >> /secret.txt
 # RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
+# RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 RUN apt update
 RUN apt-get update
 RUN apt install net-tools -y
