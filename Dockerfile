@@ -64,6 +64,8 @@ RUN apt install net-tools -y
 # RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 # RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 # RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
+# RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
+# RUN echo `cat /kaniko/docker-credential-acr-env` >> /secret.txt
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["app.py"]
